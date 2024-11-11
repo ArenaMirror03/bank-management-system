@@ -2,19 +2,17 @@
 #include <string.h>
 
 int main() {
-  char name[10];
+  char str[10];
   int length, i;
 
   printf("Enter your name: ");
-  fgets(name, sizeof(name), stdin);
+  gets(str);
+  length = strlen(str);
+  printf("Reverse: \n");
+  for (i=length; i >= 0; i-- )
 
-  name[strcspn(name, "\n")] = '\0';
-
-  length = strlen(name);
-
-  printf("Reversed name: ");
-  for (i = length - 1; i >= 0; i--) {
-    printf("%c", name[i]);
+  {
+    printf("%c", str[i]);
   }
 
   
